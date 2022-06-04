@@ -10,7 +10,16 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.18.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanemarinva1983/node-challenge-quote-server.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/vanemarinva1983/node-challenge-quote-server/issues"
+  },
+  "homepage": "https://github.com/vanemarinva1983/node-challenge-quote-server#readme"
 }

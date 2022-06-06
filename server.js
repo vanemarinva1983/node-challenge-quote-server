@@ -1,4 +1,5 @@
 const { response } = require("express");
+const { request } = require("express");
 // server.js
 // This is where your node app starts
 
@@ -25,6 +26,19 @@ app.get('/quotes', function(request, response) {
 
 app.get('/quotes/random', function(request, response) {
   response.send(pickFromArray(quotes))
+});
+
+/*
+app.get ('quotes/search', function(request, response) {
+  const term = request.query.term.toLowerCase()
+  response.send(quotes.filter(q => q.quote.includes(request.query.term)))
+});
+*/
+
+app.get('/quotes/search', (request, response) => {
+  const term = request.query.term.toLowerCase()  
+  const search = quotes.filter(quote => quote.quote.toLowerCase().includes(term) || quote.author.toLowerCase().includes(term))
+  response.send(search)
 });
 
 //...END OF YOUR CODE
